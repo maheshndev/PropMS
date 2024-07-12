@@ -64,12 +64,6 @@
    "unique": 1
   },
   {
-   "fieldname": "parent_property",
-   "fieldtype": "Link",
-   "label": "Parent property",
-   "options": "Property"
-  },
-  {
    "fieldname": "column_break_2",
    "fieldtype": "Column Break"
   },
