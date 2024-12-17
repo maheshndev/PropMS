@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-25 20:00:07.754998",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "technician",
+  "proficiency",
+  "technician_email",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "technician",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Technician",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "technician.designation",
+   "fieldname": "proficiency",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Proficiency"
+  },
+  {
+   "fetch_from": "technician.company_email",
+   "fieldname": "technician_email",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Technician Email"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nNot Started\nIn Progress\nCompleted"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-11 19:30:19.369467",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "person in charge",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

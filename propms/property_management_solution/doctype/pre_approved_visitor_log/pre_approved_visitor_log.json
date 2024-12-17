@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-05 19:34:38.147537",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_xhj9",
+  "visitor_name",
+  "tenant",
+  "purpose_of_visit",
+  "check_in_time",
+  "check_out_time",
+  "property",
+  "car_number",
+  "relation_with_tenant"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_xhj9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "visitor_name",
+   "fieldtype": "Data",
+   "label": "Visitor Name"
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "purpose_of_visit",
+   "fieldtype": "Long Text",
+   "label": "Purpose Of Visit"
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check In Time"
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Datetime",
+   "label": "Check Out Time"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "car_number",
+   "fieldtype": "Data",
+   "label": "Car Number"
+  },
+  {
+   "fieldname": "relation_with_tenant",
+   "fieldtype": "Data",
+   "label": "Relation With Tenant"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-06 15:35:37.618516",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "Pre-Approved Visitor Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
