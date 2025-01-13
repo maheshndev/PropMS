@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant}-{####}",
+ "creation": "2024-12-05 19:34:37.108980",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tenant",
+  "property_feedback_section_section",
+  "property",
+  "rating",
+  "feedback",
+  "column_break_jyij",
+  "unit_owner",
+  "section_break_vvjy",
+  "facility",
+  "facility_rating",
+  "facility_feed_back",
+  "service_feedback_section_section",
+  "service",
+  "service_rating",
+  "service_feedback"
+ ],
+ "fields": [
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "property_feedback_section_section",
+   "fieldtype": "Section Break",
+   "label": "Property Feedback Section"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fieldname": "rating",
+   "fieldtype": "Rating",
+   "label": "Rating",
+   "mandatory_depends_on": "eval:!in_list([\"\", undefined], doc.property)"
+  },
+  {
+   "depends_on": "eval:!in_list([\"\", undefined], doc.property)",
+   "fieldname": "feedback",
+   "fieldtype": "Text",
+   "label": "Feedback"
+  },
+  {
+   "fieldname": "column_break_jyij",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "property.unit_owner",
+   "fieldname": "unit_owner",
+   "fieldtype": "Link",
+   "label": "Unit Owner",
+   "options": "Tenant"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_vvjy",
+   "fieldtype": "Section Break",
+   "label": "Facility Feedback Section"
+  },
+  {
+   "fieldname": "facility",
+   "fieldtype": "Table MultiSelect",
+   "label": "Facility",
+   "options": "Multiselect facility"
+  },
+  {
+   "fieldname": "facility_rating",
+   "fieldtype": "Rating",
+   "label": "Facility Rating",
+   "mandatory_depends_on": "eval:!in_list([\"\", undefined], doc.facility)"
+  },
+  {
+   "depends_on": "eval: doc.facility && doc.facility.length > 0\r\n",
+   "fieldname": "facility_feed_back",
+   "fieldtype": "Text",
+   "label": "Facility Feed Back"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "service_feedback_section_section",
+   "fieldtype": "Section Break",
+   "label": "Service Feedback Section"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Data",
+   "label": "Service"
+  },
+  {
+   "fieldname": "service_rating",
+   "fieldtype": "Rating",
+   "label": "Service Rating",
+   "mandatory_depends_on": "eval:!in_list([\"\", undefined], doc.service)"
+  },
+  {
+   "depends_on": "eval:!in_list([\"\", undefined], doc.service)",
+   "fieldname": "service_feedback",
+   "fieldtype": "Text",
+   "label": "Service Feedback"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 13:16:33.599140",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "Tenant Satisfaction form",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

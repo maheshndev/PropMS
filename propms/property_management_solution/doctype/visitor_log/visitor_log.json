@@ -1,0 +1,125 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-05 19:34:36.938259",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "visitor_name",
+  "visited",
+  "tenant",
+  "purpose_of_the_visit",
+  "column_break_ifpi",
+  "check_in_time",
+  "check_out_time",
+  "property",
+  "unit_owner",
+  "unit_owner_email_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "VISITOR-"
+  },
+  {
+   "fieldname": "visitor_name",
+   "fieldtype": "Data",
+   "label": "Visitor Name"
+  },
+  {
+   "default": "0",
+   "fieldname": "visited",
+   "fieldtype": "Check",
+   "label": "Visited",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "label": "Tenant",
+   "options": "Tenant"
+  },
+  {
+   "fieldname": "purpose_of_the_visit",
+   "fieldtype": "Small Text",
+   "label": "Purpose of the Visit"
+  },
+  {
+   "fieldname": "column_break_ifpi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "check_in_time",
+   "fieldtype": "Datetime",
+   "label": "Check In Time"
+  },
+  {
+   "fieldname": "check_out_time",
+   "fieldtype": "Datetime",
+   "label": "Check Out Time"
+  },
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property"
+  },
+  {
+   "fetch_from": "property.unit_owner",
+   "fieldname": "unit_owner",
+   "fieldtype": "Link",
+   "label": "Unit Owner",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "unit_owner.email_id",
+   "fieldname": "unit_owner_email_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Unit Owner Email ID",
+   "options": "Email"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Visitor Log",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_calendar_and_gantt": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-12-06 15:37:43.920896",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "Visitor Log",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
