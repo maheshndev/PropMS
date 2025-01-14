@@ -4,4 +4,4 @@
 *.swp
 tags
 propms/docs/current
-*/**/__pycache__
+__pycache__/
