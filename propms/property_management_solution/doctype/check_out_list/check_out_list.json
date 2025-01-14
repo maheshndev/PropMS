@@ -1,0 +1,60 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-05 19:34:38.432561",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "srno",
+  "asset",
+  "column_break_tdgh",
+  "inspection_completed",
+  "damage_cost",
+  "picture"
+ ],
+ "fields": [
+  {
+   "fieldname": "srno",
+   "fieldtype": "Data",
+   "label": "Sr.No"
+  },
+  {
+   "fieldname": "asset",
+   "fieldtype": "Link",
+   "label": "Asset",
+   "options": "Assets"
+  },
+  {
+   "fieldname": "column_break_tdgh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "inspection_completed",
+   "fieldtype": "Check",
+   "label": "Inspection Completed"
+  },
+  {
+   "fieldname": "damage_cost",
+   "fieldtype": "Currency",
+   "label": "Damage Cost"
+  },
+  {
+   "fieldname": "picture",
+   "fieldtype": "Attach",
+   "label": "Picture"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-06 15:35:37.132532",
+ "modified_by": "Administrator",
+ "module": "Property Management Solution",
+ "name": "Check out List",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
